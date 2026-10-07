@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Freelance PH | Discover Filipino Talent. Build Connections.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;--blue:#2354E8;--blue-d:#1E3A8A;--blue-l:#EAF0FF;--bg:#FFFFFF;--alt:#F6F9FF;--ink:#0F1B3D;--mute:#55627F;--line:#DCE4F5;--card:#FFFFFF;--on-blue:#FFFFFF;--ok:#12805C;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{line-height:1.15;margin:0;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.alt{background:var(--alt)}
+h2{font-size:clamp(28px,4.6vw,42px);font-weight:700}
+.lead{color:var(--mute);font-size:18px;max-width:620px;margin-top:14px}
+.btn{display:inline-block;background:var(--blue);color:var(--on-blue);font-weight:600;text-decoration:none;padding:15px 28px;border-radius:999px;font-size:16px;border:2px solid var(--blue);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(29,78,216,.28)}
+.btn.ghost{background:transparent;color:var(--blue)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.note{font-size:14px;color:var(--mute);margin-top:14px}
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--blue);letter-spacing:-.03em}
+.logo span{color:var(--ink)}
+nav .btn{padding:10px 20px;font-size:14px}
+/* hero */
+.hero{padding:64px 0 84px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(36px,6.4vw,62px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero .lead{font-size:19px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.search{display:flex;align-items:center;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:12px 18px;color:var(--mute);font-size:15px;margin-bottom:16px;box-shadow:0 8px 28px rgba(29,78,216,.10)}
+.profile{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 14px 40px rgba(29,78,216,.12)}
+.profile+.profile{margin-top:14px;margin-left:28px}
+.p-top{display:flex;gap:14px;align-items:center}
+.av{width:54px;height:54px;border-radius:50%;background:var(--blue);color:var(--on-blue);display:grid;place-items:center;font-weight:700;font-size:18px;flex:none}
+.p-top b{display:block;font-size:17px}
+.p-top small{color:var(--mute);font-size:13px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{background:var(--blue-l);color:var(--blue-d);font-size:13px;font-weight:500;padding:5px 12px;border-radius:999px}
+.avail{display:inline-flex;align-items:center;gap:6px;color:var(--ok);font-size:13px;font-weight:600;margin-top:14px}
+.avail::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.sample{font-size:12px;color:var(--mute);text-align:right;margin-top:10px}
+
+.ic{width:22px;height:22px;fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.dir{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 50px rgba(35,84,232,.14);overflow:hidden}
+.dir-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;background:var(--alt);border-bottom:1px solid var(--line)}
+.dir-bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.dir-bar span{margin-left:10px;flex:1;background:var(--card);border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--mute);padding:3px 12px}
+.dir-body{padding:18px}
+.search{box-shadow:none;margin-bottom:14px;padding:11px 16px}
+.row{display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:13px;margin-top:10px;background:var(--card)}
+.row .ph{width:56px;height:56px;border-radius:50%;overflow:hidden;flex:none}
+.row .ph svg{display:block;width:100%;height:100%}
+.row b{display:block;font-size:15px;line-height:1.3}
+.row small{color:var(--mute);font-size:12.5px}
+.row .tags{margin-top:8px;gap:6px}
+.row .tag{font-size:11.5px;padding:3px 10px}
+.row .avail{margin:0 0 0 auto;font-size:12px;white-space:nowrap;align-self:flex-start}
+.sample{font-weight:500}
+@media (max-width:820px){.row .avail{display:none}}
+
+.groups{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+.grp{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px 28px}
+.grp-h{display:flex;align-items:center;gap:14px}
+.grp-h .ico{margin:0}
+.grp-h h3{font-size:18px;font-weight:600}
+.grp-h small{display:block;color:var(--mute);font-size:13.5px;margin-top:2px}
+.grp ul{list-style:none;margin:18px 0 0;padding:0}
+.grp li{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-top:1px solid var(--line);font-weight:500;font-size:15.5px}
+.grp li::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue-l);border:2px solid var(--blue)}
+.start{margin-top:18px;background:var(--blue-l);border:1px solid var(--line);border-radius:22px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.start h3{font-size:21px;font-weight:700}
+.start p{color:var(--mute);margin-top:4px;max-width:520px}
+@media (max-width:820px){.groups{grid-template-columns:1fr}.grp{padding:22px}}
+
+.marquee{overflow:hidden;margin:40px 0 22px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mrow{overflow:hidden;padding:7px 0}
+.track{display:flex;gap:14px;width:max-content;animation:slide 38s linear infinite}
+.mrow.rev .track{animation-direction:reverse;animation-duration:44s}
+.marquee:hover .track{animation-play-state:paused}
+.mset{display:flex;gap:14px}
+.pill{display:inline-flex;align-items:center;gap:12px;background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:9px 24px 9px 10px;font-weight:600;font-size:16px;white-space:nowrap}
+.pill i{width:36px;height:36px;border-radius:50%;background:var(--blue-l);display:grid;place-items:center}
+.pill .ic{width:18px;height:18px}
+@keyframes slide{to{transform:translateX(calc(-50% - 7px))}}
+@media (prefers-reduced-motion:reduce){.track{animation:none}.mrow{overflow-x:auto}.marquee{-webkit-mask-image:none;mask-image:none}}
+/* grids */
+.grid{display:grid;gap:18px;margin-top:40px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.card h3{font-size:19px;font-weight:600;margin-bottom:8px}
+.card p{color:var(--mute);font-size:15px}
+.ico{width:44px;height:44px;border-radius:14px;background:var(--blue-l);display:grid;place-items:center;font-size:21px;margin-bottom:16px}
+.steps .card{position:relative}
+.steps .n{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--blue);color:var(--on-blue);font-weight:700;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{border:1.5px solid var(--line);background:var(--card);padding:9px 18px;border-radius:999px;font-weight:500;font-size:15px}
+.list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.list li{padding-left:30px;position:relative;color:var(--mute);font-size:15.5px}
+.list li::before{content:"";position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--blue-l) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232354E8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat}
+.list li{padding-left:34px}
+.list b{color:var(--ink)}
+.no{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.no span{background:var(--blue-l);color:var(--blue-d);font-weight:600;padding:8px 16px;border-radius:999px;font-size:14px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+/* founding */
+.band{background:var(--blue-l);color:var(--ink);border:1px solid var(--line);border-radius:32px;padding:56px 40px;text-align:center}
+.band h2{color:var(--ink)}
+.band p{max-width:600px;margin:16px auto 0;color:var(--mute);font-size:18px}
+.band .btn{margin-top:28px}
+.band .fine{font-size:14px;margin-top:16px}
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-top:12px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--mute);margin-top:12px;font-size:15.5px}
+.faq{max-width:760px;margin:0 auto}
+footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--mute);font-size:14px}
+footer .logo{font-size:22px}
+footer .links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:18px 0}
+footer .links a{text-decoration:none;font-weight:500;color:var(--ink)}
+@media (max-width:820px){
+  section{padding:60px 0}
+  .hero .wrap,.split,.g3,.g2{grid-template-columns:1fr}
+  .profile+.profile{margin-left:0}
+  .band{padding:44px 24px;border-radius:24px}
+  nav .hide-sm{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10.5" r="2.3"/><path d="M5.5 17c.7-2 2-3 3.5-3s2.8 1 3.5 3M15 9.5h3M15 13h3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="m8.5 12.2 2.5 2.5 4.5-5"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.5 3 6.2 6.8 1-4.9 4.8 1.2 6.8L12 18l-6.1 3.3 1.2-6.8L2.2 9.7l6.8-1z"/></symbol>
+<symbol id="i-clip" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2m1 10 2 2 4-4"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+</defs></svg>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Freelance<span> PH</span></a>
+    <a class="btn cta" href="#">Create my free profile</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Filipino talent is everywhere. Let's make it <em>easier to find.</em></h1>
+      <p class="lead">Freelance PH is a free, searchable directory of Filipino freelancers, virtual assistants, creatives, and specialists. Get listed, get found, and let people reach you directly.</p>
+      <div class="cta-row">
+        <a class="btn cta" href="#">Create my free profile</a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
+      <p class="note">Free to join. New freelancers welcome. No bidding, no fees.</p>
+    </div>
+    <div aria-hidden="true">
+<div class="dir"><div class="dir-bar"><i></i><i></i><i></i><span>freelanceph.com/directory</span></div><div class="dir-body">
+<div class="search"><svg class="ic" style="width:18px;height:18px"><use href="#i-search"/></svg>Search skill, name, or location</div>
+<div class="row"><div class="ph"><svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#DCE7FF"/><path d="M8 64c2-14 12-20 24-20s22 6 24 20z" fill="#2354E8"/><rect x="27" y="36" width="10" height="10" rx="4" fill="#E0AC84"/><circle cx="32" cy="27" r="11" fill="#E0AC84"/><path d="M20 28c-2-12 6-18 13-17 8 0 13 7 11 17-1-6-5-9-12-9s-10 3-12 9z" fill="#2B1B14"/><path d="M20 26c-1 9 0 16 3 20-4-3-6-9-3-20zM44 26c1 9 0 16-3 20 4-3 6-9 3-20z" fill="#2B1B14"/></svg></div><div><b>Maria Santos</b><small>Virtual Assistant · Cebu</small><div class="tags"><span class="tag">Inbox management</span><span class="tag">Scheduling</span></div></div><div class="avail">Open to work</div></div>
+<div class="row"><div class="ph"><svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#E6EEFF"/><path d="M8 64c2-14 12-20 24-20s22 6 24 20z" fill="#1E3A8A"/><rect x="27" y="36" width="10" height="10" rx="4" fill="#C98F66"/><circle cx="32" cy="27" r="11" fill="#C98F66"/><path d="M21 26c-1-10 5-15 11-15s12 5 11 15c-2-4-4-6-11-6s-9 2-11 6z" fill="#1A1A1F"/></svg></div><div><b>Jun Reyes</b><small>Video Editor · Laguna</small><div class="tags"><span class="tag">Short-form video</span><span class="tag">E-commerce</span></div></div><div class="avail">Open to work</div></div>
+<div class="row"><div class="ph"><svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#D3E0FF"/><path d="M8 64c2-14 12-20 24-20s22 6 24 20z" fill="#3B6BFF"/><rect x="27" y="36" width="10" height="10" rx="4" fill="#EDC1A0"/><circle cx="32" cy="27" r="11" fill="#EDC1A0"/><path d="M20 30c-3-13 5-20 13-19 9 1 14 9 10 19-1-7-4-10-11-10s-10 3-12 10z" fill="#4A2A1C"/><path d="M19 29c-1 8 1 14 4 18-5-3-7-9-4-18z" fill="#4A2A1C"/></svg></div><div><b>Ana Dela Cruz</b><small>Copywriter · Davao</small><div class="tags"><span class="tag">Email copy</span><span class="tag">SaaS</span></div></div><div class="avail">Open to work</div></div>
+</div></div>
+<p class="sample">Sample preview of the directory. Names and photos are illustrations.</p>
+</div>
+  </div>
+</header>
+
+<section class="alt" id="how">
+  <div class="wrap">
+    <h2>Get listed in four simple steps.</h2>
+    <p class="lead">No long application. Fill in your details, add your links, and we handle the rest.</p>
+    <div class="grid g3 steps" style="grid-template-columns:repeat(4,1fr)">
+      <div class="card"><div class="n">1</div><h3>Create your profile</h3><p>Tell us who you are, what you do, and where people can see your work.</p></div>
+      <div class="card"><div class="n">2</div><h3>Get reviewed</h3><p>Our team checks your profile and lets you know by email, usually within 48 hours.</p></div>
+      <div class="card"><div class="n">3</div><h3>Get discovered</h3><p>Anyone looking for Filipino talent can search for you by name, skill, industry, or location.</p></div>
+      <div class="card"><div class="n">4</div><h3>Connect</h3><p>They contact you directly. What happens next is between you and them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Everyone's welcome. Really.</h2>
+    <p class="lead">You don't need years of experience, a big portfolio, or a "top freelancer" badge. If you're Filipino and you offer freelance or remote services, you belong here.</p>
+    </div>
+<div class="marquee" aria-label="Roles welcome on Freelance PH"><div class="mrow "><div class="track"><div class="mset"><span class="pill"><i><svg class="ic"><use href="#i-clip"/></svg></i>Virtual assistants</span><span class="pill"><i><svg class="ic"><use href="#i-pen"/></svg></i>Designers</span><span class="pill"><i><svg class="ic"><use href="#i-mic"/></svg></i>Freelance hosts</span><span class="pill"><i><svg class="ic"><use href="#i-code"/></svg></i>Developers</span><span class="pill"><i><svg class="ic"><use href="#i-clip"/></svg></i>Executive assistants</span><span class="pill"><i><svg class="ic"><use href="#i-pen"/></svg></i>Video editors</span><span class="pill"><i><svg class="ic"><use href="#i-mic"/></svg></i>UGC creators</span><span class="pill"><i><svg class="ic"><use href="#i-code"/></svg></i>Marketers</span><span class="pill"><i><svg class="ic"><use href="#i-clip"/></svg></i>Customer support</span><span class="pill"><i><svg class="ic"><use href="#i-pen"/></svg></i>Photographers</span></div><div class="mset" aria-hidden="true"><span class="pill"><i><svg class="ic"><use href="#i-clip"/></svg></i>Virtual assistants</span><span class="pill"><i><svg class="ic"><use href="#i-pen"/></svg></i>Designers</span><span class="pill"><i><svg class="ic"><use href="#i-mic"/></svg></i>Freelance hosts</span><span class="pill"><i><svg class="ic"><use href="#i-code"/></svg></i>Developers</span><span class="pill"><i><svg class="ic"><use href="#i-clip"/></svg></i>Executive assistants</span><span class="pill"><i><svg class="ic"><use href="#i-pen"/></svg></i>Video editors</span><span class="pill"><i><svg class="ic"><use href="#i-mic"/></svg></i>UGC creators</span><span class="pill"><i><svg class="ic"><use href="#i-code"/></svg></i>Marketers</span><span class="pill"><i><svg class="ic"><use href="#i-clip"/></svg></i>Customer support</span><span class="pill"><i><svg class="ic"><use href="#i-pen"/></svg></i>Photographers</span></div></div></div><div class="mrow rev"><div class="track"><div class="mset"><span class="pill"><i><svg class="ic"><use href="#i-mic"/></svg></i>Content creators</span><span class="pill"><i><svg class="ic"><use href="#i-code"/></svg></i>AI specialists</span><span class="pill"><i><svg class="ic"><use href="#i-pen"/></svg></i>Writers</span><span class="pill"><i><svg class="ic"><use href="#i-clip"/></svg></i>Operations help</span><span class="pill"><i><svg class="ic"><use href="#i-code"/></svg></i>Automation experts</span><span class="pill"><i><svg class="ic"><use href="#i-mic"/></svg></i>Social media managers</span><span class="pill"><i><svg class="ic"><use href="#i-users"/></svg></i>Consultants</span><span class="pill"><i><svg class="ic"><use href="#i-users"/></svg></i>Coaches</span><span class="pill"><i><svg class="ic"><use href="#i-up"/></svg></i>Brand-new freelancers</span><span class="pill"><i><svg class="ic"><use href="#i-users"/></svg></i>Independent pros</span></div><div class="mset" aria-hidden="true"><span class="pill"><i><svg class="ic"><use href="#i-mic"/></svg></i>Content creators</span><span class="pill"><i><svg class="ic"><use href="#i-code"/></svg></i>AI specialists</span><span class="pill"><i><svg class="ic"><use href="#i-pen"/></svg></i>Writers</span><span class="pill"><i><svg class="ic"><use href="#i-clip"/></svg></i>Operations help</span><span class="pill"><i><svg class="ic"><use href="#i-code"/></svg></i>Automation experts</span><span class="pill"><i><svg class="ic"><use href="#i-mic"/></svg></i>Social media managers</span><span class="pill"><i><svg class="ic"><use href="#i-users"/></svg></i>Consultants</span><span class="pill"><i><svg class="ic"><use href="#i-users"/></svg></i>Coaches</span><span class="pill"><i><svg class="ic"><use href="#i-up"/></svg></i>Brand-new freelancers</span><span class="pill"><i><svg class="ic"><use href="#i-users"/></svg></i>Independent pros</span></div></div></div></div>
+<div class="wrap">
+    <div class="start">
+      <div><h3>Just starting out? You belong here too.</h3><p>Still building your portfolio? Start with the links you have and add more anytime. Consultants, coaches, and other independent pros are welcome as well.</p></div>
+      <a class="btn cta" href="https://api.jeniuss.com/widget/form/1rQUdV1B1XuXTicznncO" target="_blank" rel="noopener">Create my free profile</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Why join Freelance PH?</h2>
+    <div class="grid g3">
+      <div class="card"><div class="ico"><svg class="ic"><use href="#i-search"/></svg></div><h3>Get discovered</h3><p>Put your name and services in front of people who are actively looking for Filipino talent.</p></div>
+      <div class="card"><div class="ico"><svg class="ic"><use href="#i-card"/></svg></div><h3>Your own profile page</h3><p>One clean link with your photo, services, portfolio, and socials. Share it anywhere, even on your CV or email signature.</p></div>
+      <div class="card"><div class="ico"><svg class="ic"><use href="#i-check"/></svg></div><h3>Show you're available</h3><p>Mark yourself open to work, set your rate range, and list the tools you use so the right people find you faster.</p></div>
+      <div class="card"><div class="ico"><svg class="ic"><use href="#i-users"/></svg></div><h3>Meet other freelancers</h3><p>Join a growing Filipino network for referrals, collaborations, and new conversations.</p></div>
+      <div class="card"><div class="ico"><svg class="ic"><use href="#i-up"/></svg></div><h3>Build your presence</h3><p>Even if you're just starting out, a professional profile makes you look ready for the next client.</p></div>
+      <div class="card"><div class="ico"><svg class="ic"><use href="#i-star"/></svg></div><h3>Founding Member status</h3><p>Join early and get a Founding Member badge on your profile, as one of the first 10,000.</p></div>
+    </div>
+    <p class="note">Freelance PH gives you visibility and connection. We can't guarantee clients or income.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <h2>Find the right Filipino freelancer, fast.</h2>
+      <p class="lead">Hiring? Skip the endless Facebook posts and ask-around threads. Search in one place and reach out directly.</p>
+      <ul class="list">
+        <li><b>Search by name, skill, industry, or location.</b> Try "AI video editor" or "GHL specialist."</li>
+        <li><b>Filter by availability, tools, and experience</b> to find a real fit.</li>
+        <li><b>Check portfolios and verified links</b> before you say hello.</li>
+        <li><b>Contact freelancers directly.</b> No middleman and no platform fees.</li>
+      </ul>
+      <div class="cta-row"><a class="btn ghost" href="#">Browse freelancers (coming soon)</a></div>
+    </div>
+    <div class="card">
+      <h3>Not a marketplace. On purpose.</h3>
+      <p>Freelance PH helps you find the right person. What happens after that is up to the two of you.</p>
+      <div class="no"><span>No bidding</span><span>No proposals</span><span>No ratings</span><span>No commissions</span><span>No payment processing</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap split">
+    <div>
+      <h2>You stay in control of your information.</h2>
+      <p class="lead">Your profile is yours. We built Freelance PH to keep it safe and trustworthy for everyone.</p>
+    </div>
+    <ul class="list" style="margin-top:0">
+      <li><b>You choose what's public.</b> Show an email, a phone number, or just your social links.</li>
+      <li><b>Location stays general.</b> City or region only, never your exact address.</li>
+      <li><b>Every profile is reviewed.</b> We check for real people and working portfolio links.</li>
+      <li><b>Edit or delete anytime.</b> Update your details or remove your profile whenever you like.</li>
+      <li><b>Report button on every profile</b> so impersonation and spam get handled quickly.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="band">
+      <h2>We're building the first 10,000.</h2>
+      <p>One network for Filipino freelancers, from VAs to AI specialists, designers to developers, beginners to veterans. Be one of the first and get your Founding Member badge.</p>
+      <a class="btn cta" href="#">Join the first 10,000, free</a>
+      <p class="fine">Creating your basic profile is free. Takes about 5 minutes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2 style="text-align:center">Questions, answered.</h2>
+    <div class="faq" style="margin-top:30px">
+      <details><summary>Who can join Freelance PH?</summary><p>Any Filipino freelancer, virtual assistant, creative, specialist, consultant, or remote worker. Beginners are just as welcome as veterans.</p></details>
+      <details><summary>Is it really free?</summary><p>Yes. Creating your profile and getting listed is free. Founding Members keep their badge for good.</p></details>
+      <details><summary>I'm new to freelancing. Can I join?</summary><p>Absolutely. You don't need years of experience or a huge portfolio. Add the links you have and build from there.</p></details>
+      <details><summary>Do I need a website?</summary><p>No. A website helps, but you can use any professional link you have: LinkedIn, Facebook, Instagram, Behance, GitHub, or a Google Drive folder of samples.</p></details>
+      <details><summary>What happens after I submit?</summary><p>We review your profile and email you once it's live, usually within 48 hours. If something needs fixing, we'll tell you what and why.</p></details>
+      <details><summary>Who can see my contact details?</summary><p>Only what you choose to show. You decide which contact details and links are public, and you can change them anytime.</p></details>
+      <details><summary>Does Freelance PH guarantee clients or income?</summary><p>No. We make you easier to find. Whether a conversation turns into work is up to you and the client.</p></details>
+      <details><summary>Is this like Upwork or OnlineJobs.ph?</summary><p>No. Freelance PH is a directory, not a marketplace. There's no bidding, no proposals, no ratings, and no fees. People find you and contact you directly.</p></details>
+      <details><summary>I live outside the Philippines. Can I join?</summary><p>If you're a Filipino freelancer, you're welcome. You can list your current country or city on your profile.</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:64px">
+  <div class="wrap" style="text-align:center">
+    <h2>Filipino talent deserves to be discovered.</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto">One profile. One directory. One growing network. Get your name on the list.</p>
+    <div class="cta-row" style="justify-content:center"><a class="btn cta" href="#">Create my free profile</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top">Freelance<span> PH</span></a>
+    <p style="margin-top:6px">The Network of Filipino Freelancers</p>
+    <div class="links"><a class="cta" href="#">Join the directory</a><a href="#">Browse freelancers</a><a href="#">Privacy policy</a><a href="#">Terms</a></div>
+    <p>Discover Filipino Talent. Build Connections.</p>
+  </div>
+</footer>
+
+<script>
+// Paste your form link here once, and every "Create my free profile" button updates.
+var FORM_URL = "https://api.jeniuss.com/widget/form/1rQUdV1B1XuXTicznncO";
+if (FORM_URL) {
+  document.querySelectorAll("a.cta").forEach(function (a) { a.href = FORM_URL; a.target = "_blank"; a.rel = "noopener"; });
+}
+</script>
+</body>
+</html>
